@@ -1,10 +1,126 @@
+<!DOCTYPE html>
 <html>
-  <title>
-    BalanceQL
-  </title>
+  <head>
+    <title>BalanceQL</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .image-80 img {
+        max-width: 80%;
+      }
+      .image-100 img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
   <body>
-    <div>
-      BalanceQL
-    </div>
+    <textarea id="source">
+
+class: center, middle
+
+# BalanceQL
+### A tool between a complex dashboard and a plain XL sheet
+
+---
+
+# What is BalanceQL?
+
+BalanceQL is a handy tool for energy traders and analysts to speed up the data analysis cycle.
+
+Results
+- Faster feedback loops - higher interests on digging into data;
+
+- Quicker insights on data relationships;
+
+- Bigger chances to find meaningful features.
+
+---
+
+# The EDA (exploratory data analysis) cycle
+.image-100[![eda](./img/eda.png)]
+
+---
+
+# A complex dashboard
+
+Pros: Powerful features
+- Can handle big data and join different data sets on server side;
+
+- Interactive charts.
+
+Cons: Static
+- Hard to tweak data for ad hoc analysis;
+
+- Slow to add new metrics.
+
+---
+
+# A plain XL sheet
+
+Pros: Agile
+- Handy to do quick calculations on the data set.
+
+Cons: Scaling problem
+- Content out of control: long formulas with multiple layers of index / match functions;
+
+- Data size: Limited performance on big data; Needs pre-filtering tools.
+
+---
+
+# How does BalanceQL help?
+
+**Query human-readable data with simple SQL queries**
+
+Example: analyse relationship between radiation and solar generation in Spain
+1. Join two data tables (grid and weather) into one based on the timestamp column
+
+2. Filter rows based on country code; Get only relevant Spanish data
+
+3. Select columns
+
+---
+
+# How does BalanceQL help?
+
+**Query human-readable data with simple SQL queries**
+
+.image-80[![balanceql_query](./img/balanceql_query.png)]
+
+---
+
+# How does BalanceQL help?
+
+**Fastly visualise query results in interactive charts**
+
+Steps
+1. Choose chart type
+
+2. Choose columns
+
+.image-80[![balanceql_scatter](./img/balanceql_scatter.png)]
+
+---
+
+class: center, middle
+
+# Thank you!
+
+[www.balanceql.com](https://www.balanceql.com)
+
+    </textarea>
+    <script src="remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
   </body>
 </html>
